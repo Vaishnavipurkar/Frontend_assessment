@@ -59,7 +59,7 @@ export function RecentOrders() {
       {sortedOrders.map((order, index) => (
         <div
           key={index}
-          className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-4 shadow-md"
+          className="flex items-center justify-between bg-white dark:bg-gray-800 border border-gray-200 rounded-lg p-4 shadow-md"
         >
           <div className="flex items-center space-x-4">
             <Avatar className="h-10 w-10">
@@ -67,12 +67,12 @@ export function RecentOrders() {
               <AvatarFallback>{order.avatarFallback}</AvatarFallback>
             </Avatar>
             <div>
-              <p className="text-sm font-medium">{order.name}</p>
-              <p className="text-xs text-gray-500">{order.email}</p>
+              <p className="text-sm font-medium dark:text-gray-200">{order.name}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">{order.email}</p>
             </div>
           </div>
           <div className="flex items-center">
-            <p className="text-sm font-medium text-gray-700">{order.amount}</p>
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-200">{order.amount}</p>
             <span
               className={`ml-2 px-2 py-1 text-xs font-medium rounded ${
                 order.status === "pending"
